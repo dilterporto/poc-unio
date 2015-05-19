@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net46": {
+      "wrappedProject": "../../Unio.Poc.Implementacao3.csproj",
+      "bin": {
+        "assembly": "../../obj/{configuration}/Unio.Poc.Implementacao3.dll",
+        "pdb": "../../obj/{configuration}/Unio.Poc.Implementacao3.pdb"
+      },
+      "dependencies": {
+        "Unio.Poc.Interfaces": "1.0.0-*"
+      }
+    }
+  }
+}

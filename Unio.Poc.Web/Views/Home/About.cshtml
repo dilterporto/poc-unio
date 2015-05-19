@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Rendimentos";
+}
+
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <input type="text" id="txtValor" />
+    <button id="btnCalcular">Calcular</button>
+</div>
+<div >
+    <label id="lbl" style="color:red;font-weight:bold"></label>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#btnCalcular").click(function () {
+            $.ajax(
+                {
+                    url: "/Home/About",
+                    method: "POST",
+                    data: { pValue: $("#txtValor").val() },
+                    success: function (msg) {
+                        $("#lbl").html(msg);
+                    }
+                }
+            );
+        });
+    })
+</script>
